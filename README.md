@@ -1,4 +1,4 @@
-# Movie Generator
+# Better Movie Generator
 
 A simple full-stack web application that generates a random high-rated movie using the TMDB API, with genre filtering and trailer previews.
 
