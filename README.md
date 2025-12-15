@@ -30,7 +30,7 @@ A simple full-stack web application that generates a random high-rated movie usi
 * HTML
 * CSS 
 * JavaScript (Fetch API)
-* 
+
 ---
 
 ## Description
