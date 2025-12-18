@@ -1,5 +1,6 @@
 requests
 python-dotenv==1.0.1
 pandas
-fastapi
+fastapi[all]
 uvicorn
+pytest
