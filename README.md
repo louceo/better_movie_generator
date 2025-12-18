@@ -31,6 +31,11 @@ A simple full-stack web application that generates a random high-rated movie usi
 * CSS 
 * JavaScript (Fetch API)
 
+**Testing**
+
+* Pytest
+* FastAPI TestClient
+
 ---
 
 ## Description
@@ -50,3 +55,76 @@ The frontend consumes the API, dynamically updates the DOM, and embeds trailers 
 * Dynamic DOM manipulation with JavaScript
 * Handling API edge cases such as empty results and pagination
 * Basic state management without a database
+* Writing automated tests for API endpoints
+
+---
+
+## Testing
+
+This project includes automated tests for the API endpoints using **pytest** and **FastAPI TestClient**.
+
+### How to Run Tests
+
+1. Make sure all dependencies are installed:
+
+```bash
+pip install -r requirements.txt
+````
+
+2. Run all tests from the project root:
+
+```bash
+pytest -v tests/
+```
+
+### What the Tests Cover
+
+* `/movie` endpoint:
+
+  * Status code is 200
+  * Response is not empty
+  * Response is a dictionary
+  * Keys include `title` and `overview`
+
+* `/genre` endpoint:
+
+  * Status code is 200
+  * Response is not empty
+  * Response is a list of dictionaries
+  * Each genre has an `id` field of type integer
+  * List is not empty
+
+* Consistency between movie `genre_ids` and available `/genre` IDs
+
+---
+
+## How to Run the Project
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/better-movie-generator.git
+```
+
+2. Navigate to the project folder:
+
+```bash
+cd better-movie-generator
+```
+
+3. Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+4. Run the FastAPI server:
+
+```bash
+uvicorn app.main:app --reload
+```
+
+5. Open `index.html` in your browser or use the frontend live server.
+
+
+
